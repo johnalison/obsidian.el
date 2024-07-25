@@ -495,7 +495,7 @@ In the `obsidian-daily-notes-directory' if set otherwise in `obsidian-inbox-dire
 in `obsidian-directory' root.
 ."
   (interactive)
-  (let* ((title (format-time-string "%Y-%m-%d"))
+  (let* ((title (format-time-string "%d %B %Y %A"))
          (filename (s-concat obsidian-directory "/" obsidian-daily-notes-directory "/" title ".md"))
          (clean-filename (s-replace "//" "/" filename)))
     (find-file (expand-file-name clean-filename) t)
